@@ -6,7 +6,9 @@ require("dotenv").config();
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin: '*', // Allow all origins
+}));
 
 const invokeUrl = "https://ai.api.nvidia.com/v1/genai/stabilityai/stable-diffusion-xl"
 
